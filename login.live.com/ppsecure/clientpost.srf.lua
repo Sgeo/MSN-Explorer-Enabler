@@ -1,1 +1,6 @@
-ServeAsset('/login.live.com/ppsecure/clientpost.srf')
+local _, port = GetServerAddr()
+local asset = LoadAsset('/login.live.com/ppsecure/clientpost.srf')
+local assetReplaced = asset:gsub("%%HERE%%", GetHost() .. ':' .. port)
+SetStatus(200)
+SetHeader('Content-Type', 'text/xml')
+Write(assetReplaced)

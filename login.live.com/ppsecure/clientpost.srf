@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?><LoginResponse Success="true"><Redirect>http://login.msn.com/passport/</Redirect></LoginResponse>
+<?xml version="1.0" encoding="utf-8"?><LoginResponse Success="true"><Redirect>http://%HERE%/dummy.htm</Redirect></LoginResponse>
