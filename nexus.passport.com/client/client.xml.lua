@@ -1,0 +1,6 @@
+local _, port = GetServerAddr()
+local clientData = LoadAsset('/nexus.passport.com/client/client.xml')
+local clientDataReplaced = clientData:gsub("%%HERE%%", GetHost() .. ':' .. port)
+SetStatus(200)
+SetHeader('Content-Type', 'text/xml')
+Write(clientDataReplaced)
